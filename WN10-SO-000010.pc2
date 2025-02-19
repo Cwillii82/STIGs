@@ -20,8 +20,8 @@
     PowerShell Ver. : 
 
 .USAGE
-    Put any usage instructions here.
-    Example syntax:
+    net user Guest /active:no
+
     PS C:\> .\__remediation_template(STIG-ID-WN10-SO-000010).ps2 
 #>
 
