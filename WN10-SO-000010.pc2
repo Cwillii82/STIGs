@@ -1,1 +1,38 @@
+ <#
+.SYNOPSIS
+    This PowerShell script ensures that the built-in guest account is disabled.
+
+.NOTES
+    Author          : Calvin Williams
+    LinkedIn        : linkedin.com/in/calvin-williams-076903ba
+    GitHub          : github.com/Cwillii82
+    Date Created    : 2025-02-19
+    Last Modified   : 2025-02-19
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-SO-000010
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\__remediation_template(STIG-ID-WN10-AU-000500).ps1 
+#>
+
+# Check if the Guest account exists
+$guestAccount = Get-LocalUser -Name "Guest" -ErrorAction SilentlyContinue
+
+if ($guestAccount) {
+    # Disable the Guest account
+    Disable-LocalUser -Name "Guest"
+    Write-Output "Guest account has been disabled."
+} else {
+    Write-Output "Guest account does not exist."
+} 
 
