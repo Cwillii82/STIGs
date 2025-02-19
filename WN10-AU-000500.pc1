@@ -20,7 +20,7 @@
     PowerShell Ver. : 
 
 .USAGE
-    PS C:\> .\__remediation_template(STIG-ID-WN10-AU-000500).ps1 
+    PS C:\Users\My-VM> __remediation_template(STIG-ID-WN10-AU-000500).ps1 
 #>
 
 
