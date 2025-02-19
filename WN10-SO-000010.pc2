@@ -22,7 +22,7 @@
 .USAGE
     net user Guest /active:no
 
-    PS C:\> .\__remediation_template(STIG-ID-WN10-SO-000010).ps2 
+   PS C:\Users\My-VM> __remediation_template(STIG-ID-WN10-SO-000010).ps2 
 #>
 
 # Check if the Guest account exists
