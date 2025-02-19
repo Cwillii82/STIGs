@@ -1,4 +1,29 @@
- # Check if running as Administrator
+ <#
+.SYNOPSIS
+    This PowerShell script ensures that Secure Boot is enabled on Windows 10 systems.
+
+.NOTES
+    Author          : Calvin Williams
+    LinkedIn        : linkedin.com/in/calvin-williams-076903ba
+    GitHub          : github.com/Cwillii82
+    Date Created    : 2025-02-19
+    Last Modified   : 2025-02-19
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-00-000020
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+      PS C:\Users\My-VM> __remediation_template(WN10-00-000020).ps3 
+#> 
+
+# Check if running as Administrator
 $CurrentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
 $Principal = New-Object Security.Principal.WindowsPrincipal($CurrentUser)
 $AdminRole = [Security.Principal.WindowsBuiltInRole]::Administrator
